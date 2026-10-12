@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Giao diện Mini Cooking Hand V2" />
+    <title>Mini Cooking Hand V2</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">BẢN GIAO DIỆN TĨNH · V1</p>
+          <h1>Mini Cooking Hand <span>V2</span></h1>
+          <p class="lede">Không gian chuẩn bị brief hình ảnh và video cho từng món ăn.</p>
+        </div>
+        <div class="release-state" aria-label="Trạng thái phát hành">
+          <span class="status-dot"></span>
+          <div><strong>Chưa sẵn sàng phát hành</strong><small>Cần dữ liệu đã xác minh</small></div>
+        </div>
+      </header>
+
+      <section class="panel dish-panel" aria-labelledby="dish-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">BƯỚC 01</p><h2 id="dish-title">Chọn món ăn</h2></div>
+          <span class="empty-chip">0 món đã tải</span>
+        </div>
+        <label for="dish-select">Món ăn</label>
+        <select id="dish-select" disabled>
+          <option>Chưa có dữ liệu món ăn được xác minh</option>
+        </select>
+        <p class="notice" role="status">Danh sách món ăn chưa được cung cấp. Không có món nào được tự động phê duyệt.</p>
+      </section>
+
+      <section class="overview-grid" aria-label="Tổng quan trạng thái">
+        <article class="panel status-card"><p class="eyebrow">TRẠNG THÁI NỘI DUNG</p><strong class="status-value muted">CHƯA XÁC MINH</strong><p>Không có nội dung APPROVED hoặc REVIEWED để hiển thị.</p></article>
+        <article class="panel status-card"><p class="eyebrow">ĐIỀU KIỆN XUẤT</p><strong class="status-value muted">BỊ KHÓA</strong><p>Prompt chỉ được sao chép khi có dữ liệu thật và đủ điều kiện phát hành.</p></article>
+      </section>
+
+      <section class="panel timeline-panel" aria-labelledby="timeline-title">
+        <div class="section-heading"><div><p class="eyebrow">BƯỚC 02</p><h2 id="timeline-title">Timeline theo shot</h2></div><span class="count">0 shot</span></div>
+        <div class="empty-state"><div class="empty-icon" aria-hidden="true">⌁</div><h3>Chưa có timeline được xác minh</h3><p>Chọn một món có dữ liệu đã được duyệt để xem các shot.</p></div>
+      </section>
+
+      <section class="prompt-grid" aria-label="Prompt sản xuất">
+        <article class="panel prompt-card" aria-labelledby="image-prompt-title">
+          <div class="section-heading"><div><p class="eyebrow">BƯỚC 03A</p><h2 id="image-prompt-title">Prompt ảnh</h2></div><span class="status-label">KHÓA</span></div>
+          <textarea aria-label="Prompt ảnh" readonly placeholder="Prompt ảnh sẽ xuất hiện khi dữ liệu đã được xác minh."></textarea>
+          <button type="button" disabled data-copy="image">Sao chép prompt ảnh</button>
+        </article>
+        <article class="panel prompt-card" aria-labelledby="video-prompt-title">
+          <div class="section-heading"><div><p class="eyebrow">BƯỚC 03B</p><h2 id="video-prompt-title">Prompt video</h2></div><span class="status-label">KHÓA</span></div>
+          <textarea aria-label="Prompt video" readonly placeholder="Prompt video sẽ xuất hiện khi dữ liệu đã được xác minh."></textarea>
+          <button type="button" disabled data-copy="video">Sao chép prompt video</button>
+        </article>
+      </section>
+    </main>
+    <footer>Mini Cooking Hand V2 · Giao diện khởi tạo · Chưa tích hợp engine, QA, dữ liệu hay xác thực license.</footer>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
